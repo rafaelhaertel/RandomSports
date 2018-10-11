@@ -1,0 +1,37 @@
+<div class="container">
+  <h3>List Of Players</h3>
+  <select class="mb-1 col-3 d-flex custom-select" ng-model="sportselected"  ng-change="selectedItemChanged()" ng-options="k*1 as v for (k,v) in sport">
+    <option value="" disabled selected>Select Sport</option>
+  </select> 
+  <fieldset  data-ng-repeat="player in players">
+    <input class="mb-1 d-inline form-control col-2" type="text" ng-model="player.name" name="" placeholder="Name">
+    <div class="col-1 d-inline-block text-center text-nowrap">{{player.position}}</div>
+    <select class="mb-1 custom-select col-2" ng-if="player.id" ng-model="player.position" >
+      <option value="" disabled selected>Position</option>
+      <option value="GK" label="GK">GK</option>
+      <option value="DF" label="DF">DF</option>
+      <option value="MF" label="MF">MF</option>
+      <option value="CF" label="CF">CF</option>
+    </select>
+    <select class="mb-1 custom-select col-2" ng-model="player.skill" convert-to-number >
+      <option value="" disabled selected>Skill</option>
+      <option value="1" label="1">1</option>
+      <option value="2" label="2">2</option>
+      <option value="3" label="3">3</option>
+      <option value="4" label="4">4</option>
+      <option value="5" label="5">5</option>
+    </select>	
+    
+    <select class="mb-1 custom-select col-2" ng-model="player.stamina" convert-to-number >
+    	<option value="" disabled selected>Stamina</option>
+    	<option value="1" label="1">1</option>
+      <option value="2" label="2">2</option>
+      <option value="3" label="3">3</option>
+      <option value="4" label="4">4</option>
+      <option value="5" label="5">5</option>
+    </select>
+    <button  class="btn btn-danger" ng-click="removePlayer(player, players)">Remove</button>
+  </fieldset>
+  <button class="btn btn-light" ng-click="addNewPlayer()">Add Player</button>
+  <button  class="btn btn-danger" ng-click="shuffleTeams(players, type)">Shuffle</button>
+</div>

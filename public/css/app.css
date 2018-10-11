@@ -1,0 +1,84 @@
+/* app css stylesheet */
+
+@import url("modal.css");
+@import url("carousel.css");
+
+body {
+  font-family: 'Oswald', sans-serif;;
+  font-weight: lighter;
+  background-color: #34353A;
+  color: #F6F6F8;
+}
+
+a {
+  text-decoration: none !important;
+} 
+
+.logo {
+  height: 27px;
+}
+
+.marker {
+  height: 30px !important;
+  margin-top: 15px; 
+}
+
+.navbar-default {
+    background-color: #34353A;
+    border-color: #34353A;
+}
+
+.button-tv {
+  background: #495261;
+  margin-right: 10px;
+  margin-left: -10px;
+}
+
+.button-air {
+  background: #59BED2;
+}
+
+.navbar-toggle {
+  border: none;
+  color: #f1f1f1;
+}
+
+.back-button {
+  padding-right: 0;
+}
+
+#questions {
+  margin-top: 2%;
+}
+
+#content {
+  padding: 5%;
+}
+
+.centered {
+  display: table;
+  margin: auto;
+  float: none
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .carousel-indicators { 
+    top: 100%;
+  }
+
+  #questions {
+    margin-top: 90px;
+  }
+}
+
+@media (min-width: 768px) {
+  .small-bullet {
+  background-color: #cfd2d9 !important;
+  border-color: #cfd2d9 !important;
+  cursor: default !important;
+  height: 4px !important;
+  margin-bottom: 2px !important;
+  margin-left: 2px !important;
+  margin-right: 2px !important;
+  width: 4px !important;
+}
